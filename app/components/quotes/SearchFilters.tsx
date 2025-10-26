@@ -22,8 +22,8 @@ export default function SearchFilters() {
   useEffect(() => {
     // Fetch tags
     apiClient.getTags().then((response) => {
-      if (response.success && response.data) {
-        setTags(response.data)
+      if (response.success && response.data && Array.isArray(response.data)) {
+        setTags(response.data as TagData[])
       }
     })
   }, [])
