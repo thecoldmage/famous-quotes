@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useAuthStore } from '@/lib/store'
 import { apiClient } from '@/lib/api-client'
 import { useEffect } from 'react'
+import { UserPublic } from '@/types'
 
 export default function Header() {
   const { user, setUser, setLoading, logout } = useAuthStore()
@@ -12,7 +13,7 @@ export default function Header() {
     // Check auth status on mount
     apiClient.getCurrentUser().then((response) => {
       if (response.success && response.data && typeof response.data === 'object' && 'id' in response.data) {
-        setUser(response.data)
+        setUser(response.data as UserPublic)
       } else {
         setUser(null)
       }
