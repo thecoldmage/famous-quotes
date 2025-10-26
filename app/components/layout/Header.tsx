@@ -11,7 +11,7 @@ export default function Header() {
   useEffect(() => {
     // Check auth status on mount
     apiClient.getCurrentUser().then((response) => {
-      if (response.success && response.data && 'id' in response.data) {
+      if (response.success && response.data && typeof response.data === 'object' && 'id' in response.data) {
         setUser(response.data)
       } else {
         setUser(null)
