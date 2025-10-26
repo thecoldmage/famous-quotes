@@ -1,10 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Disable Turbopack for production builds to fix path alias resolution
-  experimental: {
-    turbo: undefined
-  }
+  // Configure webpack resolver to properly handle path aliases
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': __dirname,
+    };
+    return config;
+  },
 };
 
 export default nextConfig;
