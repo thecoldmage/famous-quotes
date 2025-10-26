@@ -85,16 +85,16 @@ export default function QuoteFeed() {
 
     const response = await apiClient.voteQuote(quoteId, value)
 
-    if (response.success) {
+    if (response.success && response.data) {
       // Update local state
       setQuotes((prev) =>
         prev.map((q) =>
           q.id === quoteId
             ? {
                 ...q,
-                upvotes: response.data.upvotes,
-                downvotes: response.data.downvotes,
-                userVote: response.data.userVote,
+                upvotes: (response.data as any).upvotes,
+                downvotes: (response.data as any).downvotes,
+                userVote: (response.data as any).userVote,
               }
             : q
         )
