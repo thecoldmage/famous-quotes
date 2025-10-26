@@ -1,0 +1,43 @@
+{
+  "persons": [
+    {
+      "name": "Albert Einstein",
+      "description": "Elderly man with wild white hair, prominent mustache, deep-set eyes, wearing casual attire",
+      "biography": "German-born theoretical physicist who developed the theory of relativity. Winner of the 1921 Nobel Prize in Physics. One of the most influential scientists of the 20th century.",
+      "isRealPerson": true,
+      "category": "scientist",
+      "quotes": [
+        {
+          "text": "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.",
+          "date": "1929",
+          "origin": "interview",
+          "originName": "Saturday Evening Post Interview",
+          "tags": ["philosophy", "science", "creativity"]
+        },
+        {
+          "text": "The important thing is not to stop questioning. Curiosity has its own reason for existing.",
+          "date": null,
+          "origin": null,
+          "originName": null,
+          "tags": ["philosophy", "science", "learning"]
+        }
+      ]
+    },
+    {
+      "name": "Sherlock Holmes",
+      "description": "Tall, lean man with sharp features, piercing eyes, aquiline nose, wearing a deerstalker cap and Inverness cape",
+      "biography": "Fictional consulting detective created by Sir Arthur Conan Doyle. Known for his logical reasoning, forensic skills, and deductive methods.",
+      "isRealPerson": false,
+      "category": "literary character",
+      "quotes": [
+        {
+          "text": "When you have eliminated the impossible, whatever remains, however improbable, must be the truth.",
+          "date": "1890",
+          "origin": "book",
+          "originName": "The Sign of Four",
+          "tags": ["philosophy", "logic", "literature"]
+        }
+      ]
+    }
+  ]
+}
