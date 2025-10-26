@@ -4,7 +4,7 @@ import path from "path";
 const nextConfig: NextConfig = {
   turbopack: {
     resolveAlias: {
-      '@': path.resolve(__dirname),
+      '@': path.resolve(__dirname, 'app'),
     },
   },
 };
