@@ -28,7 +28,7 @@ export const personSchema = z.object({
   name: z.string().min(1, 'Name is required'),
   description: z.string().min(10, 'Description must be at least 10 characters'),
   biography: z.string().min(20, 'Biography must be at least 20 characters'),
-  isRealPerson: z.boolean().default(true),
+  isRealPerson: z.boolean().optional().default(true),
   category: z.string().optional(),
 })
 
