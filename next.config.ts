@@ -1,14 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Configure webpack resolver to properly handle path aliases
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': __dirname,
-    };
-    return config;
-  },
+  // Empty turbopack config to use default behavior with tsconfig path aliases
+  turbopack: {},
 };
 
 export default nextConfig;
